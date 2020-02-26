@@ -12,7 +12,9 @@
 
         {% csrf_token %}
     </form>
-    <p>the result {{ x }} {{ operate }} {{ y }} is :{{ result }}</p>
+       {% for key,value in result_list.items %}
+        <p>the result {{ x }} {{ key }} {{ y }} is :{{ value }}</p></td>
+    {% endfor %}
 </head>
 <body>
 
